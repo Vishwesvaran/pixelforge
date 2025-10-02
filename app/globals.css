@@ -39,6 +39,8 @@
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
 
+
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
 
@@ -70,6 +72,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -89,6 +92,31 @@
 
 /* ========================================== TAILWIND STYLES */
 @layer utilities {
+  .size-full {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Common sizes (optional) */
+  .size-10 {
+    width: 2.5rem;
+    /* same as w-10 */
+    height: 2.5rem;
+    /* same as h-10 */
+  }
+
+  .size-16 {
+    width: 4rem;
+    /* same as w-16 */
+    height: 4rem;
+    /* same as h-16 */
+  }
+
+  .size-20 {
+    width: 5rem;
+    height: 5rem;
+  }
+
   /* ===== UTILITIES */
   .wrapper {
     @apply max-w-5xl mx-auto px-5 md:px-10 w-full text-dark-400 p-16-regular;
@@ -195,7 +223,7 @@
   }
 
   .select-trigger {
-    @apply flex items-center  gap-2 py-5 capitalize focus-visible:outline-none;
+    @apply flex items-center gap-2 py-5 capitalize focus-visible:outline-none;
   }
 
   .select-item {
@@ -293,7 +321,7 @@
   }
 
   .media-uploader_cta-image {
-    @apply rounded-[16px] bg-white  p-5 shadow-sm shadow-purple-200/50;
+    @apply rounded-[16px] bg-white p-5 shadow-sm shadow-purple-200/50;
   }
 
   /* Navbar Component */
@@ -324,11 +352,11 @@
   }
 
   .sidebar-nav_elements {
-    @apply hidden w-full flex-col items-start gap-2 md:flex;
+    @apply hidden w-full flex-col gap-2 md:flex items-start;
   }
 
   .sidebar-nav_element {
-    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+    @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover transition-all hover:bg-purple-100 hover:shadow-inner;
   }
 
   .sidebar-link {
