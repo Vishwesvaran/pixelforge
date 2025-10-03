@@ -13,7 +13,7 @@ const Sidebar = () => {
     <aside className='sidebar'>
       <div className="flex size-full flex-col gap-4 items-center">
         <Link href={'/'} className='sidebar-logo'>
-          <Image src="/assets/pixelForgelogo.png" width={180} alt='logo' height={28} />
+          <Image src="/assets/images/pixelForgelogo.png" width={180} alt='logo' height={28} />
         </Link>
 
         <nav className="sidebar-nav">
@@ -64,7 +64,7 @@ const Sidebar = () => {
 
           <SignedOut>
             <Button asChild className='button bg-purple-gradient bg-cover'>
-              <Link href={'/sign-in'}></Link>
+              <Link href={'/sign-in'}>Login</Link>
             </Button>
           </SignedOut>
         </nav>
