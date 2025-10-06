@@ -67,9 +67,10 @@ const TransformationForm = ({ action, data = null, type, userId, creditBalance, 
             const transformationUrl = getCldImageUrl({
                 width: image?.width,
                 height: image?.height,
-                src: image.pubilcId,
-                ...transformationConfig,
+                src: image?.publicId,
+                ...transformationConfig
             })
+
             const imageData = {
                 title: values.title,
                 publicId: image?.publicId,
@@ -77,8 +78,8 @@ const TransformationForm = ({ action, data = null, type, userId, creditBalance, 
                 width: image?.width,
                 height: image?.height,
                 config: transformationConfig,
-                secureURL: image?.secureUrl,
-                transformationURL: transformationUrl,
+                secureUrl: image?.secureUrl,
+                transformationUrl: transformationUrl,
                 aspectRatio: values.aspectRatio,
                 prompt: values.prompt,
                 color: values.color,
