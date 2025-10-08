@@ -1,36 +1,183 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 PixelForge -- AI Image SaaS Platform
 
-## Getting Started
+PixelForge is a full-stack AI-powered image processing SaaS platform
+that combines cutting-edge machine learning features with seamless user
+experience and secure payment integration. Designed for creators,
+developers, and professionals, it provides advanced AI image
+transformation tools to elevate productivity and creativity.
 
-First, run the development server:
+------------------------------------------------------------------------
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ⚙️ Tech Stack
+
+-   **Frontend:** Next.js, TypeScript, TailwindCSS, Shadcn
+-   **Backend:** MongoDB, Cloudinary, Stripe, Clerk Authentication
+-   **Architecture:** Modular, scalable, and reusable codebase for
+    maintainability and future scalability.
+
+------------------------------------------------------------------------
+
+## 🔋 Features
+
+👉 **Authentication and Authorization**\
+Secure user access with Clerk for registration, login, and protected
+routes.
+
+👉 **Community Image Showcase**\
+Explore user-generated image transformations with pagination for
+effortless navigation.
+
+👉 **Advanced Image Search**\
+Search images based on content or detected objects intelligently and
+accurately.
+
+👉 **AI Image Tools**\
+Includes multiple AI-powered image capabilities: - 🖼️ Image Restoration:
+Repair and revive old or damaged images. - 🎨 Image Recoloring: Change
+colors of objects or sections within images. - ✂️ Object Removal:
+Precisely remove unwanted elements. - 🪄 Generative Fill: Fill missing
+parts of images using AI. - 🧍 Background Removal: Extract subjects
+cleanly from backgrounds.
+
+👉 **Transformation Management**\
+Edit, delete, or view detailed transformation data.
+
+👉 **Credits System**\
+Earn or purchase credits to perform image transformations with balance
+tracking.
+
+👉 **Stripe Integration**\
+Securely purchase credits via Stripe for uninterrupted use.
+
+👉 **Profile Dashboard**\
+View personal transformations, credits, and manage your account
+efficiently.
+
+👉 **Responsive Design**\
+Built with TailwindCSS and Shadcn for seamless experience across
+devices.
+
+------------------------------------------------------------------------
+
+## 🚀 Quick Start
+
+Follow these steps to set up the project locally on your system.
+
+### Prerequisites
+
+Ensure the following tools are installed: - Git\
+- Node.js\
+- npm (Node Package Manager)
+
+### Cloning the Repository
+
+``` bash
+git clone https://github.com/Vishwesvaran/pixelforge.git
+cd pixelforge
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install dependencies using:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+``` bash
+npm install
+```
 
-## Learn More
+### Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+Create a `.env.local` file in your project root and add:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+``` bash
+#NEXT
+NEXT_PUBLIC_SERVER_URL=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#MONGODB
+MONGODB_URL=
 
-## Deploy on Vercel
+#CLERK
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+WEBHOOK_SECRET=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#CLOUDINARY
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+
+#STRIPE
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+```
+
+Replace placeholder values with your real credentials from **Clerk**,
+**MongoDB**, **Cloudinary**, and **Stripe**.
+
+------------------------------------------------------------------------
+
+### Running the Project
+
+Start the development server:
+
+``` bash
+npm run dev
+```
+
+Then open <http://localhost:3000> in your browser to view the app.
+
+------------------------------------------------------------------------
+
+## 🧩 Architecture Overview
+
+PixelForge follows a modular and scalable structure:
+
+    /app
+     ┣ 📂(auth)       → Authentication pages and routes
+     ┣ 📂(api)        → API endpoints for transformations, users, and payments
+     ┣ 📂(dashboard)  → User dashboard and profile management
+     ┣ 📂(transform)  → Image processing functionalities
+     ┣ 📂components   → Reusable UI components (Shadcn + Tailwind)
+     ┣ 📂lib          → Utility and helper functions
+     ┣ 📂constants    → App-wide constants and configurations
+     ┗ 📜middleware.ts → Route protection and authorization logic
+
+------------------------------------------------------------------------
+
+## 💳 Payment Integration
+
+Stripe enables secure credit-based purchases. All transactions are
+verified with webhooks for fraud prevention and accurate credit
+assignment.
+
+------------------------------------------------------------------------
+
+## ☁️ Cloudinary Integration
+
+Used for image storage and optimized delivery. All images processed via
+AI are securely uploaded and managed in Cloudinary for performance and
+scalability.
+
+------------------------------------------------------------------------
+
+## 🔐 Authentication with Clerk
+
+PixelForge leverages Clerk for modern, passwordless authentication with
+support for Google, GitHub, and email-based sign-ins.
+
+------------------------------------------------------------------------
+
+## 🧠 AI Functionalities
+
+PixelForge integrates advanced AI models for various image tasks: -
+Restoration - Recoloring - Object Removal - Generative Fill - Background
+Removal
+
+Each feature is built to provide realistic, high-quality results with
+minimal user input.
+
