@@ -186,7 +186,7 @@ minimal user input.
 ## 🤝 Credits
 
 **Inspired by the work of [Adrian Hajdin](https://github.com/adrianhajdin)**  
-Tutorial reference: [YouTube – Ahwoks_dawU](https://www.youtube.com/watch?v=Ahwoks_dawU)
+Tutorial reference: [YouTube – Build and Deploy a Full Stack AI SaaS Platform with Next js, TypeScript, Stripe](https://www.youtube.com/watch?v=Ahwoks_dawU)
 
 -----------------------------------------------------------------------
 
