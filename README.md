@@ -188,12 +188,11 @@ minimal user input.
 **Inspired by the work of [Adrian Hajdin](https://github.com/adrianhajdin)**  
 Tutorial reference: [YouTube – Ahwoks_dawU](https://www.youtube.com/watch?v=Ahwoks_dawU)
 
-…
+-----------------------------------------------------------------------
 
-## 💡 Author & Credit
+## 💡 Author 
 
 Created and maintained by **Vishwesvaran M**  
 This project is heavily inspired by Adrian Hajdin’s work and the YouTube tutorial linked above.
 
-…
 
